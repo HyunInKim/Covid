@@ -15,6 +15,7 @@
 		1F629B582523590E0055A735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F629B562523590E0055A735 /* LaunchScreen.storyboard */; };
 		1F689BBE25286E3B007E2992 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F689BBD25286E3B007E2992 /* BasicViewController.swift */; };
 		1F689BBF25286E3B007E2992 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F689BBD25286E3B007E2992 /* BasicViewController.swift */; };
+		1F8ABA77252B6C48001002A1 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8ABA76252B6C48001002A1 /* CalenderView.swift */; };
 		476CA741775C168F6F7EC511 /* Pods_covid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0DCF7ADDF984153AD9B34 /* Pods_covid.framework */; };
 		FB5F33F818161B0FF9B802ED /* Pods_covid_covidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8AC668302066BBC254C3D /* Pods_covid_covidUITests.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		1F629B5E2523590F0055A735 /* covidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = covidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F629B692523590F0055A735 /* covidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = covidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F689BBD25286E3B007E2992 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicViewController.swift; path = "../../../../../Desktop/PanModal-master/PanModal-master/Sample/View Controllers/Basic/BasicViewController.swift"; sourceTree = "<group>"; };
+		1F8ABA76252B6C48001002A1 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		2002FEF10F8CF279C4A65935 /* Pods-covid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid.release.xcconfig"; path = "Target Support Files/Pods-covid/Pods-covid.release.xcconfig"; sourceTree = "<group>"; };
 		75E0DCF7ADDF984153AD9B34 /* Pods_covid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C55970B7D1CD5C728D6D19 /* Pods-covidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covidTests.debug.xcconfig"; path = "Target Support Files/Pods-covidTests/Pods-covidTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1F629B542523590E0055A735 /* Assets.xcassets */,
 				1F629B562523590E0055A735 /* LaunchScreen.storyboard */,
 				1F629B592523590E0055A735 /* Info.plist */,
+				1F8ABA76252B6C48001002A1 /* CalenderView.swift */,
 			);
 			path = covid;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				1F629B502523590C0055A735 /* ViewController.swift in Sources */,
 				1F689BBE25286E3B007E2992 /* BasicViewController.swift in Sources */,
+				1F8ABA77252B6C48001002A1 /* CalenderView.swift in Sources */,
 				1F629B4C2523590C0055A735 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
