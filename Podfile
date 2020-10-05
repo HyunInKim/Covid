@@ -11,7 +11,7 @@ target 'covid' do
   pod 'SwiftyXMLParser'
   pod 'FSCalendar'
   pod 'ScrollableGraphView'
-
+  pod 'SnapKit', '~> 5.0.0'
   target 'covidTests' do
     inherit! :search_paths
     # Pods for testing
