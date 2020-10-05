@@ -7,6 +7,10 @@ target 'covid' do
 
   # Pods for covid
   pod 'PanModal'
+  pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyXMLParser'
+  pod 'FSCalendar'
+  pod 'ScrollableGraphView'
 
   target 'covidTests' do
     inherit! :search_paths
