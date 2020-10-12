@@ -13,6 +13,11 @@ class Global {
     private init() {}
     
     private static let today = Date()
+    public static var dateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        return formatter
+    }()
     static var todayArray : Array = [Date]()
     
     public static func getTodayDate(decrease: Int = 7) {
@@ -20,6 +25,15 @@ class Global {
         for _ in 0..<decrease {
             tempDate = Calendar.current.date(byAdding: .day, value: -1, to: tempDate)!
             todayArray.append(tempDate)
+        }
+    }
+    public static func getDefaultCovidData() {
+        Network.getCovidStatus(pageNo: 1,
+                               numberOfRows: 10,
+                               startCreateDt: dateFormat.string(from: todayArray.last!),
+                               endCreateDt: dateFormat.string(from: todayArray.first!)) { (covid) in
+            guard let result = covid else {return}
+            print(result)
         }
     }
 }

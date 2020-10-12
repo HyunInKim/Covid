@@ -48,23 +48,15 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
 //        setupGraph(graphView: graphView)
         createPinkGraph(graphView: graphView)
         setNavigationBar()
-        getCovidData()
+        
 
     }
     
-    private func getCovidData() {
-        Network.getCovidStatus(pageNo: 1,
-                               numberOfRows: 10,
-                               startCreateDt: dateFormatter.string(from: Global.todayArray.last!),
-                               endCreateDt: dateFormatter.string(from: Global.todayArray.first!)) { (covid) in
-            guard let result = covid else {return}
-            print(result.itemList)
-        }
-    }
+    
     func setNavigationBar(){
-            let bar:UINavigationBar! =  self.navigationController?.navigationBar
+        let bar:UINavigationBar! =  self.navigationController?.navigationBar
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-            bar.shadowImage = UIImage()
+        bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
     }
 
