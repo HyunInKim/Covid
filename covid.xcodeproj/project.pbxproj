@@ -119,11 +119,9 @@
 				1F629B4B2523590C0055A735 /* AppDelegate.swift */,
 				1F92D82B2534A61A004EB0C2 /* ViewController */,
 				1F92D82A2534A5EE004EB0C2 /* Base */,
-				1F629B512523590C0055A735 /* Main.storyboard */,
-				1F629B542523590E0055A735 /* Assets.xcassets */,
-				1F629B562523590E0055A735 /* LaunchScreen.storyboard */,
+				1F92D8462534A727004EB0C2 /* StoryBoard */,
 				1F629B592523590E0055A735 /* Info.plist */,
-				1F5870D1252F80C9001C422C /* UIColor+colorFormHex.swift */,
+				1F629B542523590E0055A735 /* Assets.xcassets */,
 			);
 			path = covid;
 			sourceTree = "<group>";
@@ -131,6 +129,7 @@
 		1F92D82A2534A5EE004EB0C2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				1F5870D1252F80C9001C422C /* UIColor+colorFormHex.swift */,
 				1F92D81F2534A535004EB0C2 /* Covid.swift */,
 				1F92D8172534A4F6004EB0C2 /* Global.swift */,
 				1F92D8092534A499004EB0C2 /* Network.swift */,
@@ -145,6 +144,15 @@
 				1F92D8412534A6CC004EB0C2 /* CalendarModalViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1F92D8462534A727004EB0C2 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				1F629B512523590C0055A735 /* Main.storyboard */,
+				1F629B562523590E0055A735 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		CB26C8EC3C87DB0966772C77 /* Frameworks */ = {
