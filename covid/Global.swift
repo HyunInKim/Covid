@@ -1,9 +1,8 @@
 //
-//  Global.swift
-//  Covid-19
+//  Globa.swift
+//  covid
 //
-//  Created by 김현인 on 2020/09/12.
-//  Copyright © 2020 HyunInKim. All rights reserved.
+//  Created by 김현인 on 2020/10/12.
 //
 
 import Foundation
