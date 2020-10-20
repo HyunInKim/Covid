@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1266920344D58016DFFF4779 /* Pods_covidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4D055B9AFC7F2017720D59 /* Pods_covidTests.framework */; };
+		1F4122BE253AEEF30078810C /* DataGetSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4122BD253AEEF30078810C /* DataGetSet.swift */; };
+		1F4122CB253AF0480078810C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4122CA253AF0480078810C /* SplashViewController.swift */; };
 		1F5870D2252F80C9001C422C /* UIColor+colorFormHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5870D1252F80C9001C422C /* UIColor+colorFormHex.swift */; };
 		1F629B4C2523590C0055A735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F629B4B2523590C0055A735 /* AppDelegate.swift */; };
 		1F629B502523590C0055A735 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F629B4F2523590C0055A735 /* ViewController.swift */; };
@@ -18,6 +20,7 @@
 		1F92D8182534A4F6004EB0C2 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92D8172534A4F6004EB0C2 /* Global.swift */; };
 		1F92D8202534A535004EB0C2 /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92D81F2534A535004EB0C2 /* Covid.swift */; };
 		1F92D8422534A6CC004EB0C2 /* CalendarModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92D8412534A6CC004EB0C2 /* CalendarModalViewController.swift */; };
+		1FC00C2F253F12EB00A431D7 /* SplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC00C2E253F12EB00A431D7 /* SplashView.storyboard */; };
 		476CA741775C168F6F7EC511 /* Pods_covid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0DCF7ADDF984153AD9B34 /* Pods_covid.framework */; };
 		FB5F33F818161B0FF9B802ED /* Pods_covid_covidUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8AC668302066BBC254C3D /* Pods_covid_covidUITests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,8 @@
 /* Begin PBXFileReference section */
 		0B29CBC916576D2A6F38EF53 /* Pods-covid-covidUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-covidUITests.release.xcconfig"; path = "Target Support Files/Pods-covid-covidUITests/Pods-covid-covidUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1169D1D676354A4EAF27BA80 /* Pods-covidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covidTests.release.xcconfig"; path = "Target Support Files/Pods-covidTests/Pods-covidTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F4122BD253AEEF30078810C /* DataGetSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetSet.swift; sourceTree = "<group>"; };
+		1F4122CA253AF0480078810C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1F5870D1252F80C9001C422C /* UIColor+colorFormHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+colorFormHex.swift"; sourceTree = "<group>"; };
 		1F629B482523590C0055A735 /* covid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = covid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F629B4B2523590C0055A735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		1F92D8172534A4F6004EB0C2 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		1F92D81F2534A535004EB0C2 /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
 		1F92D8412534A6CC004EB0C2 /* CalendarModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModalViewController.swift; sourceTree = "<group>"; };
+		1FC00C2E253F12EB00A431D7 /* SplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashView.storyboard; sourceTree = "<group>"; };
 		2002FEF10F8CF279C4A65935 /* Pods-covid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid.release.xcconfig"; path = "Target Support Files/Pods-covid/Pods-covid.release.xcconfig"; sourceTree = "<group>"; };
 		75E0DCF7ADDF984153AD9B34 /* Pods_covid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C55970B7D1CD5C728D6D19 /* Pods-covidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covidTests.debug.xcconfig"; path = "Target Support Files/Pods-covidTests/Pods-covidTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 				1F92D81F2534A535004EB0C2 /* Covid.swift */,
 				1F92D8172534A4F6004EB0C2 /* Global.swift */,
 				1F92D8092534A499004EB0C2 /* Network.swift */,
+				1F4122BD253AEEF30078810C /* DataGetSet.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 			children = (
 				1F629B4F2523590C0055A735 /* ViewController.swift */,
 				1F92D8412534A6CC004EB0C2 /* CalendarModalViewController.swift */,
+				1F4122CA253AF0480078810C /* SplashViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			children = (
 				1F629B512523590C0055A735 /* Main.storyboard */,
 				1F629B562523590E0055A735 /* LaunchScreen.storyboard */,
+				1FC00C2E253F12EB00A431D7 /* SplashView.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 			files = (
 				1F629B582523590E0055A735 /* LaunchScreen.storyboard in Resources */,
 				1F629B552523590E0055A735 /* Assets.xcassets in Resources */,
+				1FC00C2F253F12EB00A431D7 /* SplashView.storyboard in Resources */,
 				1F629B532523590C0055A735 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,10 +430,12 @@
 				1F5870D2252F80C9001C422C /* UIColor+colorFormHex.swift in Sources */,
 				1F629B502523590C0055A735 /* ViewController.swift in Sources */,
 				1F92D8182534A4F6004EB0C2 /* Global.swift in Sources */,
+				1F4122CB253AF0480078810C /* SplashViewController.swift in Sources */,
 				1F629B4C2523590C0055A735 /* AppDelegate.swift in Sources */,
 				1F92D80A2534A499004EB0C2 /* Network.swift in Sources */,
 				1F92D8422534A6CC004EB0C2 /* CalendarModalViewController.swift in Sources */,
 				1F92D8202534A535004EB0C2 /* Covid.swift in Sources */,
+				1F4122BE253AEEF30078810C /* DataGetSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9M4W2KYRD;
 				INFOPLIST_FILE = covid/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,7 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9M4W2KYRD;
 				INFOPLIST_FILE = covid/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

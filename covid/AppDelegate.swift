@@ -28,9 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        Global.getTodayDate(decrease: 7)
-        Global.getDefaultCovidData()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let firstViewController = SplashViewController()
+////        let navigationController = UINavigationController(rootViewController: firstViewController)
+////        navigationController.navigationItem.title = "코로나"
+//        window?.rootViewController = firstViewController
+//        window?.makeKeyAndVisible()
         return true
     }
 
