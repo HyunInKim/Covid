@@ -45,6 +45,7 @@ class CalendarmodalViewController: UIViewController {
         calendarView.delegate = self
         calendarView.dataSource = self
         calendarView.today = nil
+        self.delegate = MainViewController()
         setDefaultDates()  // 현재 날짜에서 일주일 전
         
         configureView()
@@ -83,24 +84,26 @@ class CalendarmodalViewController: UIViewController {
                 }
                 
                 delegate?.sendDateData(startDate: firstDate, endDate: lastDate)
-                dateFormatter.dateFormat = "yyyyMMdd"
-                Network.getCovidStatus(pageNo: 1,
-                                       numberOfRows: 10,
-                                       startCreateDt: dateFormatter.string(from: firstDate!),
-                                       endCreateDt: dateFormatter.string(from: lastDate!)) { (covid) in
-                    guard let result = covid else {return}
-                    print(result.itemList)
-                    
-                }
+//                dateFormatter.dateFormat = "yyyyMMdd"
+//                Network.getCovidStatus(pageNo: 1,
+//                                       numberOfRows: 10,
+//                                       startCreateDt: dateFormatter.string(from: firstDate!),
+//                                       endCreateDt: dateFormatter.string(from: lastDate!)) { (covid) in
+//                    guard let result = covid else {return}
+//                    print(result.itemList)
+//                    
+//                }
                 dismiss(animated: true, completion: nil)
         }.disposed(by: disposbag)
     }
     
     private func setDefaultDates() {
-        for i in 0..<Global.todayArray.count {
-            calendarView.select(Global.todayArray[i])
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        for i in 0..<Global.shared.todayArrays.count {
+            calendarView.select(Global.shared.todayArrays[i])
         }
-        sendButton.setTitle("\(dateFormatter.string(from: Global.todayArray.last!)) ~ \(dateFormatter.string(from: Global.todayArray.first!))",
+        sendButton.setTitle("\(dateFormatter.string(from: Global.shared.todayArrays.last!)) ~ \(dateFormatter.string(from: Global.shared.todayArrays.first!))",
                             for: .normal)
     }
         

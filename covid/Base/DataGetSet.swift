@@ -11,12 +11,12 @@ final class DataGetSet {
     private init() {}
     static let shared = DataGetSet()
     var covidDeathArray:[Int] = []
+    
     public var covidDeath: Int {
         get {
             return defaultForKey(key: "deathCnt")
         } set(value) {
             self.covidDeathArray.append(value)
-            setDefault(key: "deathCnt", value: value)
         }
     }
     

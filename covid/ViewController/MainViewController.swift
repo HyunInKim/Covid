@@ -11,29 +11,30 @@ import PanModal
 import ScrollableGraphView
 
 protocol RowPresentable {
-    var rowVC: UIViewController & PanModalPresentable { get }
+    var showCalendarRowView: UIViewController & PanModalPresentable { get }
 }
     
-class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
+class MainViewController: UIViewController, RowPresentable, SendDataDelegate {
     @IBOutlet weak var graphView: ScrollableGraphView!
     @IBOutlet weak var topView: UIView!
     
     private var startDate: Date?
     private var endDate: Date?
     private let today = Date()
+    private var covidData: [Int] = []
     
-    let rowVC: PanModalPresentable.LayoutType = CalendarmodalViewController()
-    fileprivate lazy var dateFormatter: DateFormatter = {
-           let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd"
-           return formatter
-    }()
+    let showCalendarRowView: PanModalPresentable.LayoutType = CalendarmodalViewController()
+//    fileprivate lazy var dateFormatter: DateFormatter = {
+//           let formatter = DateFormatter()
+//           formatter.dateFormat = "yyyyMMdd"
+//           return formatter
+//    }()
     
     var numberOfItems = 29
-    lazy var plotOneData: [Double] = self.generateRandomData(self.numberOfItems, max: 100, shouldIncludeOutliers: true)
-    lazy var plotTwoData: [Double] = self.generateRandomData(self.numberOfItems, max: 80, shouldIncludeOutliers: false)
-    
-    lazy var pinkLinePlotData: [Double] =  self.generateRandomData(self.numberOfItems, max: 100, shouldIncludeOutliers: false)
+//    lazy var plotOneData: [Double] = self.generateRandomData(self.numberOfItems, max: 100, shouldIncludeOutliers: true)
+//    lazy var plotTwoData: [Double] = self.generateRandomData(self.numberOfItems, max: 80, shouldIncludeOutliers: false)
+//
+//    lazy var pinkLinePlotData: [Double] =  self.generateRandomData(self.numberOfItems, max: 100, shouldIncludeOutliers: false)
     
     
     override var prefersStatusBarHidden : Bool {
@@ -44,12 +45,13 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         graphView.dataSource = self
+       
         topView.backgroundColor = UIColor.colorFromHex(hexString: "#222222")
 //        setupGraph(graphView: graphView)
         createPinkGraph(graphView: graphView)
+        print("test",DataGetSet.shared.covidDeathArray)
+        covidData = DataGetSet.shared.covidDeathArray
         setNavigationBar()
-        
-
     }
     
     
@@ -63,9 +65,24 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
 
     
     func sendDateData(startDate: Date?, endDate: Date?) {
-//        print("startDate:\(startDate), \(endDate)")
-        self.startDate = startDate
-        self.endDate = endDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        Network.shared.getCovidStatus(pageNo: 1,
+                               numberOfRows: 10,
+                               startCreateDt: dateFormatter.string(from: startDate!),
+                               endCreateDt: dateFormatter.string(from: endDate!)) { (covid) in
+            guard let result = covid else {return}
+            self.covidData.removeAll()
+            DataGetSet.shared.covidDeathArray.removeAll()
+            result.itemList.forEach {
+                DataGetSet.shared.covidDeath = $0.deathCnt
+            }
+            self.covidData = DataGetSet.shared.covidDeathArray
+            print("==",self.covidData)
+        }
+////        print("startDate:\(startDate), \(endDate)")
+//        self.startDate = startDate
+//        self.endDate = endDate
     }
     
     func setupGraph(graphView: ScrollableGraphView) {
@@ -119,7 +136,7 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
     func createPinkGraph(graphView: ScrollableGraphView) {
         
         // Setup the plot
-        let linePlot = LinePlot(identifier: "pinkLine")
+        let linePlot = LinePlot(identifier: "covid")
         
         linePlot.lineColor = UIColor.clear
         linePlot.shouldFill = true
@@ -136,7 +153,7 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
         
         referenceLines.dataPointLabelFont = UIFont.boldSystemFont(ofSize: 10)
         referenceLines.dataPointLabelColor = UIColor.white
-        referenceLines.dataPointLabelsSparsity = 3
+        referenceLines.dataPointLabelsSparsity = 1
         
         // Setup the graph
         graphView.backgroundFillColor = UIColor.colorFromHex(hexString: "#222222")
@@ -149,49 +166,37 @@ class ViewController: UIViewController, RowPresentable, SendDataDelegate  {
         graphView.addReferenceLines(referenceLines: referenceLines)
     }
     
-    private func generateRandomData(_ numberOfItems: Int, max: Double, shouldIncludeOutliers: Bool = true) -> [Double] {
-        var data = [Double]()
-        for _ in 0 ..< numberOfItems {
-            var randomNumber = Double(arc4random()).truncatingRemainder(dividingBy: max)
-            
-            if(shouldIncludeOutliers) {
-                if(arc4random() % 100 < 10) {
-                    randomNumber *= 3
-                }
-            }
-            
-            data.append(randomNumber)
-        }
-        return data
-    }
+    
     @IBAction func showCalendar(_ sender: Any) {
-        presentPanModal(rowVC)
+        presentPanModal(showCalendarRowView)
     }
     
 
 }
 
-extension ViewController: ScrollableGraphViewDataSource {
+extension MainViewController: ScrollableGraphViewDataSource {
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
         switch(plot.identifier) {
-        case "one":
-            return plotOneData[pointIndex]
-        case "two":
-            return plotTwoData[pointIndex]
-        case "pinkLine":
-            return pinkLinePlotData[pointIndex]
+//        case "one":
+//            return plotOneData[pointIndex]
+//        case "two":
+//            return plotTwoData[pointIndex]
+//        case "pinkLine":
+//            return pinkLinePlotData[pointIndex]
+        case "covid":
+            return Double(covidData[pointIndex])
         default:
             return 0
         }
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return "FEB \(pointIndex+1)"
+        return "FEB \(pointIndex)"
     }
     
     func numberOfPoints() -> Int {
-        return numberOfItems
+        return covidData.count
     }
     
     
