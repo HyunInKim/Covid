@@ -10,7 +10,6 @@ target 'covid' do
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyXMLParser'
   pod 'FSCalendar'
-  pod 'ScrollableGraphView'
   pod 'SnapKit', '~> 5.0.0'
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'

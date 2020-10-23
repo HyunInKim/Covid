@@ -84,15 +84,17 @@ class CalendarmodalViewController: UIViewController {
                 }
                 
                 delegate?.sendDateData(startDate: firstDate, endDate: lastDate)
-//                dateFormatter.dateFormat = "yyyyMMdd"
-//                Network.getCovidStatus(pageNo: 1,
-//                                       numberOfRows: 10,
-//                                       startCreateDt: dateFormatter.string(from: firstDate!),
-//                                       endCreateDt: dateFormatter.string(from: lastDate!)) { (covid) in
-//                    guard let result = covid else {return}
-//                    print(result.itemList)
-//                    
-//                }
+                dateFormatter.dateFormat = "yyyyMMdd"
+                Network.shared.getCovidStatus(pageNo: 1,
+                                       numberOfRows: 10,
+                                       startCreateDt: dateFormatter.string(from: firstDate!),
+                                       endCreateDt: dateFormatter.string(from: lastDate!)) { (covid) in
+                    guard let result = covid else {return}
+                    DataGetSet.shared.covidDeathArray.removeAll()
+                    result.itemList.forEach {
+                        DataGetSet.shared.covidDeath = $0.deathCnt
+                    }
+                }
                 dismiss(animated: true, completion: nil)
         }.disposed(by: disposbag)
     }

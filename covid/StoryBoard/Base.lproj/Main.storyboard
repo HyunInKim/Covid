@@ -24,26 +24,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="SrR-Yj-Xy4"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVa-k7-aDb" customClass="ScrollableGraphView" customModule="ScrollableGraphView">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="350"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="350" id="ixL-OK-HPu"/>
+                                            <constraint firstAttribute="height" constant="150" id="2Ri-VE-D5j"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="k31-PX-kP7" firstAttribute="top" secondItem="SLd-Ne-EfD" secondAttribute="top" id="2dD-AR-3hq"/>
-                                    <constraint firstAttribute="bottom" secondItem="RVa-k7-aDb" secondAttribute="bottom" constant="274" id="ZQX-80-jYj"/>
-                                    <constraint firstItem="k31-PX-kP7" firstAttribute="leading" secondItem="RVa-k7-aDb" secondAttribute="leading" id="gnO-eo-fT9"/>
-                                    <constraint firstItem="k31-PX-kP7" firstAttribute="trailing" secondItem="RVa-k7-aDb" secondAttribute="trailing" id="hVI-WF-SRg"/>
-                                    <constraint firstItem="RVa-k7-aDb" firstAttribute="top" secondItem="k31-PX-kP7" secondAttribute="bottom" id="jqc-zK-6m6"/>
-                                    <constraint firstItem="k31-PX-kP7" firstAttribute="centerX" secondItem="SLd-Ne-EfD" secondAttribute="centerX" id="kO9-pQ-wv8"/>
-                                    <constraint firstItem="k31-PX-kP7" firstAttribute="leading" secondItem="SLd-Ne-EfD" secondAttribute="leading" id="mdr-D6-ugr"/>
-                                    <constraint firstAttribute="trailing" secondItem="k31-PX-kP7" secondAttribute="trailing" id="uUA-gx-cia"/>
+                                    <constraint firstItem="k31-PX-kP7" firstAttribute="centerX" secondItem="SLd-Ne-EfD" secondAttribute="centerX" id="9MI-WH-5OQ"/>
+                                    <constraint firstItem="k31-PX-kP7" firstAttribute="top" secondItem="SLd-Ne-EfD" secondAttribute="top" id="K3n-Bm-nWm"/>
+                                    <constraint firstItem="k31-PX-kP7" firstAttribute="leading" secondItem="SLd-Ne-EfD" secondAttribute="leading" id="ROV-s5-btf"/>
+                                    <constraint firstAttribute="bottom" secondItem="k31-PX-kP7" secondAttribute="bottom" constant="624" id="tZB-xK-XtZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="k31-PX-kP7" secondAttribute="trailing" id="vPb-Ik-bWK"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-Ab-s1A">
@@ -66,13 +56,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="0JS-tv-kaU"/>
                     <connections>
-                        <outlet property="graphView" destination="RVa-k7-aDb" id="L7Q-Re-1GU"/>
                         <outlet property="topView" destination="k31-PX-kP7" id="4Q5-4U-Bf0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.1159420289855" y="60.9375"/>
+            <point key="canvasLocation" x="412" y="61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aWC-Tc-Ndb">
