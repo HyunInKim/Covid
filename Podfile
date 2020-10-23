@@ -13,6 +13,7 @@ target 'covid' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'
+  pod "SwiftChart"
   
   
   target 'covidTests' do
