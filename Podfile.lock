@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - FSCalendar (2.8.1)
   - PanModal (1.2.7)
   - RxCocoa (6.0.0-rc.1):
@@ -14,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - Charts
   - FSCalendar
   - PanModal
   - RxCocoa (= 6.0.0-rc.1)
@@ -25,6 +29,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - FSCalendar
     - PanModal
     - RxCocoa
@@ -36,6 +41,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   RxCocoa: a28d75145c07b7547b85faf1e1ad8b25af88a752
@@ -45,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
 
-PODFILE CHECKSUM: 9acd200d20a84e6ee46bac6ec2ca5e2622275638
+PODFILE CHECKSUM: 9778f96f3869db16c957efe35c7cd1d9e5460575
 
 COCOAPODS: 1.8.4

@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-covid-covidUITests/Pods-covid-covidUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
 ${BUILT_PRODUCTS_DIR}/PanModal/PanModal.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework

@@ -14,7 +14,7 @@ target 'covid' do
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'
   pod "SwiftChart"
-  
+  pod 'Charts'
   
   target 'covidTests' do
     inherit! :search_paths
